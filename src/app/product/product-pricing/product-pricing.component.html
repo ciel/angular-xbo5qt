@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Cost</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fal fa-dollar-sign"></i></span>
+                </div>
+                <input type="text" class="form-control" name="cost"
+                       [ngModel]="pricing.cost"
+                       [ngModelOptions]="{ updateOn: 'blur' }"
+                       (ngModelChange)="pricing.cost = $event" required
+                       (change)="calculate()"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Sale</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fal fa-dollar-sign"></i></span>
+                </div>
+                <input type="text" class="form-control" name="sale" [(ngModel)]="pricing.sale" required
+                       [ngModelOptions]="{ updateOn: 'blur' }"
+                       (ngModelChange)="pricing.sale = $event"
+                       (change)="calculate()"/>
+            </div>
+            <small class="form-text text-muted" *ngIf="pricing.markup">Markup Percent: <span
+                    class="badge badge-info">{{pricing.markup | percent}}</span> <span class="float-right">Est. Profit: <span
+                    class="badge badge-success">{{pricing.profit / 100 | currency}}</span></span></small>
+        </div>
+    </div>
+</div>

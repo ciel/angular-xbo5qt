@@ -1,0 +1,32 @@
+<h5 class="card-title">Product Options</h5>
+<div class="row border-bottom">
+    <div class="col">
+        <label class="control-label pt-2">Landing Page</label>
+        <p><small>Offer a simple customizable landing page to show off your products to potential clients or
+            use as sales portals.</small></p>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <div class="custom-control custom-switch pt-1 float-right">
+                <input type="checkbox" class="custom-control-input" name="landing" id="landing"
+                       [(ngModel)]="page.enable">
+                <label class="custom-control-label" for="landing"></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row border-bottom" *ngIf="page.enable">
+    <div class="col">
+        <label class="control-label pt-4">Landing Page Url</label>
+    </div>
+    <div class="col">
+        <div class="form-group mt-3">
+            <div class="input-group">
+                <input type="text" class="form-control" name="landingUrl" [(ngModel)]="page.url" required/>
+                <div class="input-group-append">
+                    <span class="input-group-text">.bmlpages.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

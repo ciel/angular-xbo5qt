@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Short Description</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <input type="text" class="form-control" name="shortDescription"
+                   [(ngModel)]="description.short"/>
+            <small class="form-text text-muted">Single line description used on estimates and
+                invoices.</small>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Long Description</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+                        <textarea class="form-control" name="longDescription" style="resize:none;"
+                                  [(ngModel)]="description.long"></textarea>
+            <small class="form-text text-muted">multi-line description used on landing pages.</small>
+        </div>
+    </div>
+</div>

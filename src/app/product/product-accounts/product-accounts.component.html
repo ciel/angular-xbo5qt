@@ -1,0 +1,21 @@
+<h5 class="card-title">Product Accounts</h5>
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Income Account</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <input type="text" class="form-control" name="income_account" [(ngModel)]="accounts.income" [ngbTypeahead]="searchIncome" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Cost Account</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <input type="text" class="form-control" name="cost_account" [(ngModel)]="accounts.cost" [ngbTypeahead]="searchCost" />
+        </div>
+    </div>
+</div>

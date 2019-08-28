@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Image</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend border-bottom">
+                    <label class="noHref btn btn-sm btn-file mr-2 border-0">
+                        <i class="fad fa-folders"></i>
+                        <span *ngIf="!fileUrl"> Browse</span>
+                        <span *ngIf="fileUrl"> Change</span>
+                        <input type="file" #originalInput (change)="onSelectFile($event)" name="productFile"
+                               style="display:none;"/>
+                    </label>
+                </div>
+                <input type="text" class="form-control" name="fileName" [(ngModel)]="fileName"/>
+            </div>
+        </div>
+    </div>
+</div>

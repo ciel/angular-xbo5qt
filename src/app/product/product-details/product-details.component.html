@@ -1,0 +1,16 @@
+<div class="col-sm-12 col-md-12 col-lg-6">
+    <div class="card">
+        <div class="card-body border-0 shadow">
+            <h5 class="card-title">Product Details</h5>
+            <product-details-image></product-details-image>
+            <product-details-identity
+                [sku]="product.sku"
+                [name]="product.name"
+                [supplier]="product.supplier"
+                [page]="product.page">
+            </product-details-identity>
+            <product-pricing [pricing]="product.pricing"></product-pricing>
+            <product-details-description [description]="product.description"></product-details-description>
+        </div>
+    </div>
+</div>

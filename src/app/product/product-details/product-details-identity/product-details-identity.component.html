@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">SKU</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <input type="text" class="form-control" name="sku" [(ngModel)]="sku" required/>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Supplier</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <input type="text" class="form-control" name="supplier" [(ngModel)]="supplier"/>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <label class="control-label pt-2">Name</label>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <input type="text" class="form-control" name="name" [(ngModel)]="name" required
+                   (change)="setLandingPageUrl()"/>
+            <small class="form-text text-danger" *ngIf="page.enable">Changing this field will alter
+                your landing page url</small>
+        </div>
+    </div>
+</div>
