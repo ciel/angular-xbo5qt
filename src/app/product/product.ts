@@ -1,14 +1,35 @@
-export interface Product {
-  id: string;
-  name: string;
-  file: string;
-  sku: string;
-  supplier: string;
-  description: ProductDescription;
-  page: ProductPage;
-  pricing: ProductPricing;
-  inventory: ProductInventory;
-  accounts: ProductAccounts;
+export class Product {
+  id: string = '';
+  name: string = '';
+  file: string = '';
+  sku: string = '';
+  supplier: string = '';
+  description: ProductDescription = new class implements ProductDescription {
+      long: string;
+      review: string;
+      short: string;
+  };
+  page: ProductPage = new class implements ProductPage {
+      enable: boolean = true;
+      url: string = '';
+  };
+  pricing: ProductPricing = new class implements ProductPricing {
+      cost: number = 0;
+      markup: number= 0;
+      profit: number= 0;
+      sale: number= 0;
+  };
+  inventory: ProductInventory = new class implements ProductInventory {
+      current: number= 0;
+      returned: number= 0;
+      sold: number= 0;
+      track: boolean = true;
+      warning: boolean = false;
+  };
+  accounts: ProductAccounts = new class implements ProductAccounts {
+      cost: any;
+      income: any;
+  };
 }
 
 /**

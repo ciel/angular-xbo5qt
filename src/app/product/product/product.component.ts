@@ -14,18 +14,7 @@ import {AccountService} from "../../account/account.service";
 })
 export class ProductComponent implements OnInit {
 
-    @Input() product: Product = new class implements Product {
-        accounts: ProductAccounts;
-        description: ProductDescription;
-        file: string;
-        id: string;
-        inventory: ProductInventory;
-        name: string;
-        page: ProductPage;
-        pricing: ProductPricing;
-        sku: string;
-        supplier: string;
-    }
+    @Input() product: Product = new Product();
 
     constructor(
         private products: ProductService,
